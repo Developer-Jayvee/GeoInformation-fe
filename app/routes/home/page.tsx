@@ -17,11 +17,8 @@ export default function HomePage(){
     useEffect(  () => {
         const fetchData = async () => {
             const response: AxiosResponse<UserInfoType> = await getIpInfo();
-
             setUserIpInfo(response.data);
-                        
         };
-
         fetchData()
     },[])
     
