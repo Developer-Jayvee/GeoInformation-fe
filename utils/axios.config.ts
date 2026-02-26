@@ -12,8 +12,12 @@ const axiosInstance = ({ apiUrl = '' , headers }: AXIOSConfigType ) => {
         headers: headers ? {...headers} :{}
     });
     instance.interceptors.request.use( 
-        (request) => {
-            return request
+        (config) => {
+            const token = localStorage.getItem('token');
+            if(token){
+                config.headers.Authorization = `Bearer ${token}`;
+            }
+            return config
         },
         (error) => {
             console.warn(`Error found in ${error}`)

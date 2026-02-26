@@ -7,6 +7,10 @@ export default function NavigationBar(){
     const navigate = useNavigate();
 
     const handleSignout = async () => {
+        const isContinue = confirm('Proceed logout ?');
+
+        if(!isContinue) return;
+        
         const response = await Logout();
         if(response){
             navigate('/');

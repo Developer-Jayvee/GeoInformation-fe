@@ -2,10 +2,8 @@ import axiosInstance from "utils/axios.config";
 import axios from "axios"
 
 export async function getIpInfo(){
-    const axiosApi = axiosInstance({ apiUrl: import.meta.env.VITE_IPINFO_GEO});
-    const geoToken = import.meta.env.VITE_IPINFO_TOKEN
-    const response = axiosApi.get(`me?token=${geoToken}`);
-
+    const axiosApi = axiosInstance({});
+    const response = axiosApi.get('geo');
     return response
 }
 export async function login(username:string , password:string){

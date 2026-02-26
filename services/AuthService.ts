@@ -9,7 +9,7 @@ export async function Login(username:string , password:string){
     }
     const token = response.data.token;
     localStorage.setItem('token',token);
-    return true;    
+    return response.data;    
 }
 export async function Logout(){
     const response = await logout();
