@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import {
     Login
 } from "services/AuthService"
-import "./login.css"
+import "app/routes/login/login.css"
 import { useNavigate } from "react-router";
 import {
     isEmailValid
