@@ -7,6 +7,7 @@ import {
 } from "react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
+import "./routes/login/login.css"
 
 export function meta({}: Route.MetaArgs) {
   return [
